@@ -1,1 +1,192 @@
-!
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Elevation | Premium Creative Spaces</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <meta
+      name="description"
+      content="Creative Elevation provides premium, design-focused spaces for creators, professionals, and events. Elevate your work and gatherings in inspiring environments."
+    />
+  </head>
+
+  <body class="fit-screen home-reference">
+    <!-- Main site navigation
+         Reused across all pages so users can move quickly -->
+    <header>
+      <nav class="main-nav">
+        <a href="index.html" class="logo">Creative Elevation</a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span class="fas fa-bars"></span>
+        </button>
+        <div class="nav-links">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Book Now</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero-content">
+        <h1>Elevate Your Creative Experience</h1>
+        <p>
+          Premium, design-rich spaces for creators, professionals, and events.
+        </p>
+        <a href="contact.html" class="cta-button">Reserve Your Suite</a>
+      </div>
+    </section>
+
+    <!-- What We Do section
+         Short brand summary + supporting image -->
+    <section
+      class="about-content-section what-we-do-section"
+      id="concept"
+      aria-label="What We Do"
+    >
+      <div class="about-text-container">
+        <h2>What We Do</h2>
+        <p>
+          Creative Elevation curates inspiring, premium environments that blend
+          aesthetics and functionality. Our mission is to empower creators and
+          professionals by providing spaces that foster productivity,
+          innovation, and meaningful connections—whether for work, content
+          creation, or special events.
+        </p>
+      </div>
+      <div class="about-image-container">
+        <img src="./imgs/img (7).jpg" alt="Creative Elevation premium space" />
+      </div>
+    </section>
+
+    <!-- Quick services overview
+         High-level cards that point users to full services page -->
+    <section class="services-section" aria-label="Our Services">
+      <h2>Our Core Offerings</h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <span class="service-icon"><i class="fas fa-camera"></i></span>
+          <h3>Studio & Content Spaces</h3>
+          <p>
+            Book beautiful, fully-equipped studios for photography, video, and
+            creative work.
+          </p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon"><i class="fas fa-users"></i></span>
+          <h3>Event Venues</h3>
+          <p>
+            Host launches, workshops, and gatherings in elegant, flexible
+            environments.
+          </p>
+        </article>
+        <article class="service-card">
+          <span class="service-icon"><i class="fas fa-laptop"></i></span>
+          <h3>Work Suites</h3>
+          <p>
+            Enjoy premium workspaces with fast Wi-Fi, ergonomic design, and
+            tranquility.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Shared footer links and social icons
+         Keeps important navigation available at page end -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-logo">Creative Elevation</div>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Book Now</a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Creative Elevation. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Back-to-top button -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- In Built Java Script For Responsiveness -->
+    <script>
+      /* Mobile nav behavior:
+           toggles .show to expand/collapse links on small screens */
+      // Opens/closes the mobile menu
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        navToggle.classList.toggle("active");
+      });
+
+      /* Progressive helper button:
+           appears after enough scroll depth to improve long-page UX */
+      // Shows the back-to-top button on scroll
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 200 ||
+          document.documentElement.scrollTop > 200
+        ) {
+          scrollTopBtn.style.display = "block";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      };
+      scrollTopBtn.onclick = function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
+
+      /* IntersectionObserver:
+           adds .animate only when elements enter viewport,
+           making transitions smoother and less expensive */
+      // Adds fade-in class when sections enter view
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+        document
+          .querySelectorAll("section, .about-content-section")
+          .forEach((section) => {
+            observer.observe(section);
+          });
+      });
+    </script>
+  </body>
+</html>

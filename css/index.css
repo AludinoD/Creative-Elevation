@@ -1,0 +1,108 @@
+/* =========================================
+   Hero Section
+   ========================================= */
+.hero {
+    min-height: calc(100vh - 58px);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 8vw;
+    background: linear-gradient(120deg, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0.45) 100%), 
+                url('/imgs/img\ \(3\).jpg') center/cover no-repeat;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.35rem, 4.1vw, 4rem);
+    margin-bottom: 1rem;
+}
+
+.hero-content p { font-size: 1.12rem; margin-bottom: 1.5rem; max-width: 560px; }
+
+.cta-button {
+    display: inline-block;
+    background: transparent;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: 0.8rem 1.6rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.cta-button:hover { background: rgba(214, 173, 96, 0.15); }
+
+/* =========================================
+   What We Do (Concept Section)
+   ========================================= */
+#concept {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.6rem;
+    max-width: 1140px;
+    margin: 3rem auto;
+    align-items: stretch;
+}
+
+.about-text-container {
+    background: rgba(24, 24, 24, 0.98);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text-container h2 { text-align: left; margin-bottom: 1.5rem; }
+.about-text-container h2::after { margin-left: 0; }
+
+.about-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 400px;
+}
+
+/* =========================================
+   Services Grid
+   ========================================= */
+.services-section {
+    padding: 4rem 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.service-card {
+    background: var(--card-bg);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    border: 1px solid rgba(214, 173, 96, 0.3);
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    border-color: var(--secondary);
+    transform: translateY(-5px);
+}
+
+.service-icon { font-size: 2rem; color: var(--secondary); margin-bottom: 1rem; display: block; }
+.service-card h3 { margin-bottom: 0.8rem; font-size: 1.2rem; }
+.service-card p { font-size: 0.95rem; line-height: 1.5; color: var(--muted); }
+
+/* =========================================
+   Mobile Adjustments
+   ========================================= */
+@media (max-width: 900px) {
+    #concept { grid-template-columns: 1fr; }
+    .services-grid { grid-template-columns: 1fr; }
+    .hero { padding-left: 1rem; text-align: center; justify-content: center; }
+    .about-image-container img { min-height: 250px; }
+}
