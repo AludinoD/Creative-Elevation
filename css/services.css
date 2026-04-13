@@ -1,0 +1,198 @@
+/* =========================================
+   Services Hero Section
+   ========================================= */
+.services-reference .services-hero-ref {
+    min-height: calc(100vh - 58px) !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    padding: 2.6rem 8vw;
+    background: linear-gradient(112deg, rgba(0, 0, 0, 0.88) 36%, rgba(0, 0, 0, 0.54) 100%), 
+                url('/imgs/img\ \(4\).jpg') center/cover no-repeat !important;
+}
+
+.services-reference .hero-content {
+    margin: 0;
+    max-width: 520px;
+}
+
+.services-reference .hero-content h1 {
+    color: var(--secondary);
+    font-size: clamp(2.25rem, 4.4vw, 3.9rem);
+    line-height: 1.05;
+    margin-bottom: 0.95rem;
+    font-family: 'Playfair Display', Georgia, serif;
+}
+
+.services-reference .hero-content p {
+    color: #f2f2f2;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 1.15rem;
+    max-width: 500px;
+}
+
+.services-reference .cta-button {
+    background: rgba(0, 0, 0, 0.35) !important;
+    color: var(--secondary);
+    border: 1px solid var(--secondary) !important;
+    border-radius: 0;
+    font-size: 0.95rem;
+    padding: 0.65rem 1.2rem;
+    text-transform: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* =========================================
+   Main Services Layout (Bento Grid)
+   ========================================= */
+.services-reference .services-main-ref {
+    max-width: 980px !important;
+    margin: 0 auto 1rem auto !important;
+    padding: 1.5rem 1rem 1rem 1rem !important;
+}
+
+.services-reference .services-layout-ref {
+    display: grid;
+    grid-template-columns: 1.55fr 1fr;
+    gap: 0.85rem;
+    align-items: stretch;
+}
+
+.services-reference .service-card-ref {
+    border: 1px solid rgba(214, 173, 96, 0.52);
+    background: rgba(15, 15, 15, 0.97);
+    padding: 0.55rem;
+    min-height: 300px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.services-reference .service-card-ref::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--card-bg-img);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.services-reference .service-card-ref::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 22%, rgba(0, 0, 0, 0.3) 70%);
+}
+
+.services-reference .service-copy {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.services-reference .services-right-ref {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 0.85rem;
+}
+
+.services-reference .services-layout-ref > .service-card-ref { --card-bg-img: url('/imgs/img\ \(4\).jpg'); }
+.services-reference .services-right-ref > .service-card-ref:first-child { --card-bg-img: url('/imgs/img\ \(5\).jpg'); }
+.services-reference .services-right-ref > .service-card-ref:last-child { --card-bg-img: url('/imgs/img\ \(2\).jpg'); }
+
+/* =========================================
+   Why Choose Us Section
+   ========================================= */
+.services-reference .why-ref {
+    max-width: 980px !important;
+    margin: 0 auto 1rem auto !important;
+    padding: 0.9rem 1rem !important;
+}
+
+.services-reference .use-cases-grid-ref {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+}
+
+.services-reference .use-case-card-ref {
+    border: 1px solid rgba(214, 173, 96, 0.5);
+    background: rgba(15, 15, 15, 0.97);
+    padding: 0.6rem;
+}
+
+.services-reference .use-case-card-ref h3 {
+    color: var(--secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.services-reference .use-case-card-ref p {
+    color: #efefef;
+    font-size: 0.95rem;
+    line-height: 1.35;
+}
+
+/* =========================================
+   Testimonials Section
+   ========================================= */
+.services-reference .testimonials-ref {
+    max-width: 980px !important;
+    margin: 0 auto 0.7rem auto !important;
+    padding: 0.9rem 1rem !important;
+}
+
+.services-reference .testimonials-grid-ref {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.65rem;
+}
+
+.services-reference .testimonial-row-ref {
+    border: 1px solid rgba(214, 173, 96, 0.5);
+    background: rgba(15, 15, 15, 0.97);
+    padding: 0.45rem 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.services-reference .testimonial-row-ref img {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.services-reference .testimonial-row-ref h4 {
+    font-size: 0.9rem;
+    color: var(--secondary);
+    margin: 0 0 0.1rem 0;
+    font-family: 'Playfair Display', serif;
+}
+
+.services-reference .testimonial-row-ref p {
+    font-size: 0.9rem;
+    color: #efefef;
+    line-height: 1.3;
+}
+
+/* =========================================
+   Responsive Logic
+   ========================================= */
+@media (max-width: 900px) {
+    .services-reference .services-layout-ref,
+    .services-reference .services-right-ref,
+    .services-reference .use-cases-grid-ref,
+    .services-reference .testimonials-grid-ref {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
