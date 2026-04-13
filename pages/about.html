@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us | Creative Elevation</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="fit-screen about-reference">
+    <!-- Main site navigation
+         Keeps page-to-page movement identical for users -->
+    <header>
+      <nav class="main-nav">
+        <div class="logo">Creative Elevation</div>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span class="fas fa-bars"></span>
+        </button>
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="./pages/about.html" aria-current="page">About</a>
+          <a href="./pages/services.html">Services</a>
+          <a href="./pages/gallery.html">Gallery</a>
+          <a href="./pages/contact.html">Book Now</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About hero with background image and intro text
+             Introduces the brand mission in one focused viewport -->
+      <section class="about-hero-ref" aria-label="About Hero">
+        <div class="hero-content">
+          <h1>About Creative Elevation</h1>
+          <p>
+            We create design-rich, premium environments that inspire focus,
+            creativity, and meaningful connections. Our mission is to elevate
+            your creative experience through thoughtfully curated spaces.
+          </p>
+          <a href="contact.html" class="hero-cta">Get in Touch</a>
+        </div>
+      </section>
+
+      <!-- Story and values content
+             Explains brand purpose and decision-making principles -->
+      <section class="about-story-ref" aria-label="Our Story">
+        <h2>Our Story</h2>
+        <p>
+          We create design-rich, premium environments that inspire focus,
+          creativity, and meaningful connections. Our mission is to elevate your
+          creative experience through thoughtfully curated spaces.
+        </p>
+        <h3>Our Values</h3>
+        <ul class="values-list">
+          <li>Excellence: Attention to every detail</li>
+          <li>Innovation: Fresh ideas in space design</li>
+          <li>Authenticity: Genuine environments</li>
+          <li>Connection: Spaces that bring people together</li>
+        </ul>
+      </section>
+
+      <!-- Team member cards
+             Presents people behind the brand with role context -->
+      <section class="team-ref" aria-label="Our Team">
+        <h2>Our Team</h2>
+        <div class="team-grid-ref">
+          <article class="team-card-ref">
+            <img
+              src="CE - Images/img (1).jpg"
+              alt="Elijah Colendres portrait"
+            />
+            <h3>Elijah Colendres</h3>
+            <p>Founder & Creative Director</p>
+          </article>
+          <article class="team-card-ref">
+            <img
+              src="CE - Images/img (1).jpg"
+              alt="Celerino Colendres portrait"
+            />
+            <h3>Celerino Colendres</h3>
+            <p>Space Design Lead</p>
+          </article>
+          <article class="team-card-ref">
+            <img
+              src="CE - Images/img (1).jpg"
+              alt="Fedelyn Colendres portrait"
+            />
+            <h3>Fedelyn Colendres</h3>
+            <p>Client Experience Manager</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Contact details and simple inquiry form
+             Gives users a low-friction way to reach the team -->
+      <section class="connect-ref" aria-label="Let's Connect">
+        <div class="connect-copy">
+          <h2>Let's Connect</h2>
+          <p>
+            Need a creative space? Creative Elevation is ready to help you plan
+            your next shoot or project.
+          </p>
+          <div class="connect-meta">
+            <h3>VISIT US</h3>
+            <p>
+              Speedex Center, M20 Salah Al Din St, Al Khabaisi, Dubai, U.A.E.
+            </p>
+            <h3>INQUIRIES</h3>
+            <p>creative.elevation2025@gmail.com<br />+971 58 652 4900</p>
+            <h3>HOURS</h3>
+            <p>Mon-Sun: 9am - 10pm</p>
+          </div>
+        </div>
+        <div class="connect-form-wrap">
+          <form class="connect-form">
+            <label for="about-name">Name</label>
+            <input id="about-name" type="text" placeholder="Elijah Colendres" />
+            <label for="about-email">Email Address</label>
+            <input
+              id="about-email"
+              type="email"
+              placeholder="example@gmail.com"
+            />
+            <label for="about-message">Message</label>
+            <textarea
+              id="about-message"
+              placeholder="Tell us something"
+            ></textarea>
+            <button class="send-btn" type="button">Send Message</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared footer links and social icons
+         Keeps navigation and socials accessible at page end -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Book Now</a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Creative Elevation. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Back-to-top button -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script>
+      /* Fade-in utility:
+           Observer adds .animate when sections become visible to avoid
+           animating offscreen elements and to keep scroll smooth. */
+      // Adds fade-in class when sections enter view
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+        document
+          .querySelectorAll("section, .about-content-section")
+          .forEach((section) => {
+            observer.observe(section);
+          });
+      });
+      /* Mobile menu toggle:
+           .show class controls expanded state in responsive nav CSS. */
+      // Opens/closes the mobile menu
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        navToggle.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
