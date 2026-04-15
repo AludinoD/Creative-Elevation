@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery | Creative Elevation</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="../css/gallery.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="fit-screen gallery-reference">
+    <!-- Main site navigation
+         Matches the same menu users see on every page -->
+    <header>
+      <nav class="main-nav">
+       <a href="../index.html" class="logo">Creative Elevation</a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span class="fas fa-bars"></span>
+        </button>
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../pages/about.html">About</a>
+          <a href="../pages/services.html" >Services</a>
+          <a href="../pages/gallery.html"aria-current="page">Gallery</a>
+          <a href="../pages/contact.html">Book Now</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Gallery hero with intro text and CTA
+             Gives immediate context before image browsing -->
+      <section class="gallery-hero-ref" aria-label="Gallery Hero">
+        <div class="hero-content">
+          <h1>Studio Gallery</h1>
+          <p>
+            Explore our versatile creative space through our curated collection
+            of photos showcasing different setups and possibilities.
+          </p>
+          <a href="contact.html" class="cta-button">Reserve Your Suite</a>
+        </div>
+      </section>
+
+      <!-- Image gallery grid
+             Uses local images as placeholders and layout examples -->
+      <section class="gallery-showcase" aria-label="Gallery Photos">
+        <div class="photo-grid">
+          <figure class="photo-card tall">
+            <img src="/imgs/img (1).jpg" alt="Studio logo close-up" />
+          </figure>
+          <figure class="photo-card tall">
+            <img src="/imgs/img (5).jpg" alt="Seating and stage setup" />
+          </figure>
+          <figure class="photo-card tall">
+            <img src="/imgs/img (7).jpg" alt="\Creative elevation wall" />
+          </figure>
+          <figure class="photo-card medium">
+            <img src="/imgs/img (6).jpg" alt="Studio room wide shot" />
+          </figure>
+          <figure class="photo-card medium">
+            <img
+              src="/imgs/img (4).jpg"
+              alt="Creative elevation branding wall"
+            />
+          </figure>
+          <figure class="photo-card medium">
+            <img
+              src="/imgs/img (3).jpg"
+              alt="Event seating arrangement"
+            />
+          </figure>
+          <figure class="photo-card wide">
+            <img src="/imgs/img (2).jpg" alt="Equipment wall setup" />
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <!-- Shared footer links and social icons
+         Keeps key links accessible at the bottom -->
+    <footer>
+      <div class="footer-container">
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61574443273442"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Book Now</a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Creative Elevation. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      /* Mobile nav behavior:
+           toggles .show to reveal/hide the menu list. */
+      // Opens/closes the mobile menu
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        navToggle.classList.toggle("active");
+      });
+
+      /* Viewport observer:
+           applies animation class when a section becomes visible. */
+      // Adds fade-in class when sections enter view
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+        document.querySelectorAll("section").forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
+  </body>
+</html>
