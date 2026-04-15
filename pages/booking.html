@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Now | Creative Elevation</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="../css/booking.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body class="fit-screen booking-reference">
+    <header>
+      <nav class="main-nav">
+        <a href="../index.html" class="logo">Creative Elevation</a>
+        <button class="nav-toggle" aria-label="Open navigation">
+          <span class="fas fa-bars"></span>
+        </button>
+        <div class="nav-links">
+          <a href="../index.html">Home</a>
+          <a href="../pages/about.html">About</a>
+          <a href="../pages/services.html">Services</a>
+          <a href="../pages/gallery.html">Gallery</a>
+          <a href="../pages/booking.html" aria-current="page">Book Now</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="booking-hero">
+        <div class="hero-content">
+          <h1>Secure Your Space</h1>
+          <p>
+            Select your preferred studio or event suite and choose a time that
+            works for your vision.
+          </p>
+        </div>
+      </section>
+
+      <section class="booking-container" aria-label="Booking Form">
+        <div class="booking-card">
+          <form class="booking-form">
+            <div class="booking-grid">
+              <div class="booking-field">
+                <label for="booking-name">Full Name</label>
+                <input
+                  type="text"
+                  id="booking-name"
+                  placeholder="Your Name"
+                  required
+                />
+              </div>
+
+              <div class="booking-field">
+                <label for="booking-service">Services Needed</label>
+                <select id="booking-service" required>
+                  <option value="" disabled selected>Select a Space</option>
+                  <option value="studio">Studio &amp; Content Space</option>
+                  <option value="event">Event Suite</option>
+                  <option value="work">Work Suite</option>
+                </select>
+              </div>
+
+              <div class="booking-field">
+                <label for="booking-date">Booking Date</label>
+                <input type="date" id="booking-date" required />
+              </div>
+
+              <div class="booking-field">
+                <label for="booking-duration">Duration</label>
+                <select id="booking-duration" required>
+                  <option value="" disabled selected>Select Duration</option>
+                  <option value="hourly">Hourly</option>
+                  <option value="half-day">Half Day</option>
+                  <option value="full-day">Full Day</option>
+                  <option value="weekly">Weekly</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="booking-field booking-message">
+              <label for="booking-message">Message</label>
+              <textarea
+                id="booking-message"
+                rows="5"
+                placeholder="Optional Message"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="booking-submit">
+              Submit Booking Request
+            </button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a
+            href="https://www.facebook.com/profile.php?id=61574443273442"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" aria-label="LinkedIn"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="gallery.html">Gallery</a>
+          <a href="contact.html">Book Now</a>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2025 Creative Elevation. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const navToggle = document.querySelector(".nav-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+        navToggle.classList.toggle("active");
+      });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.classList.add("animate");
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+        document.querySelectorAll("section").forEach((section) => {
+          observer.observe(section);
+        });
+      });
+    </script>
+  </body>
+</html>

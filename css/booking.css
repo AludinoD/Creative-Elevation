@@ -1,0 +1,125 @@
+/* 1. Force the font import so it's active on this page */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap');
+
+/* --- Hero Section --- 
+   Matches your HTML class 'booking-hero' */
+.booking-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
+                url('../imgs/img (6).jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.booking-hero h1 {
+    color: var(--secondary) !important; /* Gold: #D6AD60 */
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: 4rem !important;
+    font-weight: 400 !important;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.booking-hero p {
+    color: var(--accent);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* --- Booking Form Section --- 
+   Section Background is Grey, Card itself is Black */
+.booking-container {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    min-height: auto;
+}
+
+.booking-card {
+    background-color: var(--background);
+    border: 1px solid rgba(214, 173, 96, 0.3);
+    padding: 40px;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 750px;
+}
+
+/* Form Grid Layout */
+.booking-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* Labels - Playfair Gold */
+.booking-field label {
+    color: var(--secondary);
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Inputs - Charcoal Grey inside Black Card */
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #262626; /* Specific Charcoal Grey */
+    border: 1px solid #333;
+    border-radius: 2px;
+    color: var(--accent);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+}
+
+/* Full width for the Message area */
+.booking-message {
+    grid-column: 1 / span 2;
+    margin-top: 20px;
+}
+
+/* Date picker icon styling */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+/* Submit Button - Centered and Outlined */
+.booking-submit {
+    display: block;
+    margin: 40px auto 0;
+    background: transparent;
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+    padding: 14px 45px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.booking-submit:hover {
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .booking-hero h1 { font-size: 2.5rem !important; }
+    .booking-grid { grid-template-columns: 1fr; }
+    .booking-message { grid-column: 1; }
+    .booking-card { padding: 25px; }
+}
