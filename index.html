@@ -3,9 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Home Page -->
     <title>Home | Creative Elevation</title>
+    <!-- Seperated 2 CSS Files, Main for global styles(Nav, Footer, Hero, and any global styles) While 
+     the Other CSS is for Page Specific Styles. -->
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="./css/index.css" />
+    <!-- Font Icons CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -16,10 +20,10 @@
     />
   </head>
 
+  <!-- Main Body -->
   <body class="fit-screen home-reference">
-    <!-- Main site navigation
-         Reused across all pages so users can move quickly -->
     <header>
+      <!-- Navigation Bar With 5 Links, and Clickable Logo. -->
       <nav class="main-nav">
         <a href="index.html" class="logo">Creative Elevation</a>
         <button class="nav-toggle" aria-label="Open navigation">
@@ -36,18 +40,18 @@
     </header>
 
     <!-- Hero Section -->
+    <!-- With CTA Buttons (Call To Action) -->
     <section class="hero" aria-label="Hero">
       <div class="hero-content">
         <h1>Elevate Your Creative Experience</h1>
         <p>
           Premium, design-rich spaces for creators, professionals, and events.
         </p>
-        <a href="contact.html" class="cta-button">Reserve Your Suite</a>
+        <a href="contact.html" class="cta-button">Book Now</a>
       </div>
     </section>
 
-    <!-- What We Do section
-         Short brand summary + supporting image -->
+    <!-- What We Do section -->
     <section
       class="about-content-section what-we-do-section"
       id="concept"
@@ -68,8 +72,7 @@
       </div>
     </section>
 
-    <!-- Quick services overview
-         High-level cards that point users to full services page -->
+    <!-- Our Services Section -->
     <section class="services-section" aria-label="Our Services">
       <h2>Our Core Offerings</h2>
       <div class="services-grid">
@@ -100,8 +103,7 @@
       </div>
     </section>
 
-    <!-- Shared footer links and social icons
-         Keeps important navigation available at page end -->
+    <!-- Footer with Important Nav Bar Links and Socials -->
     <footer>
       <div class="footer-container">
         <div class="footer-logo">Creative Elevation</div>

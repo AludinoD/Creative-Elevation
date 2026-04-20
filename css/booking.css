@@ -16,11 +16,10 @@
 }
 
 .booking-hero h1 {
-    color: var(--secondary) !important; /* Gold: #D6AD60 */
+    color: var(--secondary) !important;
     font-family: 'Playfair Display', Georgia, serif !important;
     font-size: 4rem !important;
     font-weight: 400 !important;
-    letter-spacing: 4px;
     margin-bottom: 15px;
 }
 

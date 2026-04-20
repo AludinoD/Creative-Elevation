@@ -3,15 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Booking Page -->
     <title>Book Now | Creative Elevation</title>
+    <!-- Seperated 2 CSS Files, Main for global styles(Nav, Footer, Hero, and any global styles) While 
+     the Other CSS is for Page Specific Styles. -->
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="../css/booking.css" />
+    <!-- Font Icons CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
+  <!-- Main Body -->
   <body class="fit-screen booking-reference">
+    <!-- Navigation Bar With 5 Links, and Clickable Logo. -->
     <header>
       <nav class="main-nav">
         <a href="../index.html" class="logo">Creative Elevation</a>
@@ -28,6 +34,7 @@
       </nav>
     </header>
 
+    <!-- Booking Hero Section -->
     <main>
       <section class="booking-hero">
         <div class="hero-content">
@@ -39,10 +46,12 @@
         </div>
       </section>
 
+      <!-- Booking Form Grid -->
       <section class="booking-container" aria-label="Booking Form">
         <div class="booking-card">
           <form class="booking-form">
             <div class="booking-grid">
+              <!-- Name Field -->
               <div class="booking-field">
                 <label for="booking-name">Full Name</label>
                 <input
@@ -52,7 +61,7 @@
                   required
                 />
               </div>
-
+              <!-- Services Selection with Options -->
               <div class="booking-field">
                 <label for="booking-service">Services Needed</label>
                 <select id="booking-service" required>
@@ -63,11 +72,13 @@
                 </select>
               </div>
 
+              <!-- Booking Date Field With Built In Calendar from webkit -->
               <div class="booking-field">
                 <label for="booking-date">Booking Date</label>
                 <input type="date" id="booking-date" required />
               </div>
 
+              <!-- Booking Duration Field with options -->
               <div class="booking-field">
                 <label for="booking-duration">Duration</label>
                 <select id="booking-duration" required>
@@ -80,6 +91,7 @@
               </div>
             </div>
 
+            <!-- Optional Message Field -->
             <div class="booking-field booking-message">
               <label for="booking-message">Message</label>
               <textarea
@@ -88,7 +100,7 @@
                 placeholder="Optional Message"
               ></textarea>
             </div>
-
+            <!-- Submit Button -->
             <button type="submit" class="booking-submit">
               Submit Booking Request
             </button>
@@ -97,6 +109,7 @@
       </section>
     </main>
 
+    <!-- Footer with Important Nav Bar Links and Socials -->
     <footer>
       <div class="footer-container">
         <div class="footer-social">
@@ -129,7 +142,11 @@
       </div>
     </footer>
 
+    <!-- In Built Java Script For Responsiveness and Animations -->
     <script>
+      /* Mobile menu toggle:
+       switches .show so nav links are visible on small screens. */
+      // Opens/closes the mobile menu
       const navToggle = document.querySelector(".nav-toggle");
       const navLinks = document.querySelector(".nav-links");
       navToggle.addEventListener("click", () => {

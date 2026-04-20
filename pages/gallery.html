@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Gallery Page -->
     <title>Gallery | Creative Elevation</title>
+    <!-- Seperated 2 CSS Files, Main for global styles(Nav, Footer, Hero, and any global styles) While 
+     the Other CSS is for Page Specific Styles. -->
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="../css/gallery.css" />
+    <!-- Font Icons CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
+  <!-- Main Body -->
   <body class="fit-screen gallery-reference">
-    <!-- Main site navigation
-         Matches the same menu users see on every page -->
+    <!-- Navigation Bar With 5 Links, and Clickable Logo. -->
     <header>
       <nav class="main-nav">
         <a href="../index.html" class="logo">Creative Elevation</a>
@@ -31,8 +35,7 @@
     </header>
 
     <main>
-      <!-- Gallery hero with intro text and CTA
-             Gives immediate context before image browsing -->
+      <!-- Hero Section that Shows Creative Elevation -->
       <section class="gallery-hero-ref" aria-label="Gallery Hero">
         <div class="hero-content">
           <h1>Studio Gallery</h1>
@@ -44,8 +47,9 @@
         </div>
       </section>
 
-      <!-- Image gallery grid
-             Uses local images as placeholders and layout examples -->
+      <!-- Gallery Information Section -->
+      <!-- This section gives information about how Creative Elevation Looks -->
+      <!-- Gallery Grids Showcase -->
       <section class="gallery-showcase" aria-label="Gallery Photos">
         <div class="photo-grid">
           <figure class="photo-card tall">
@@ -76,8 +80,7 @@
       </section>
     </main>
 
-    <!-- Shared footer links and social icons
-         Keeps key links accessible at the bottom -->
+    <!-- Footer with Important Nav Bar Links and Socials -->
     <footer>
       <div class="footer-container">
         <div class="footer-social">
@@ -110,6 +113,7 @@
       </div>
     </footer>
 
+    <!-- In Built Java Script For Responsiveness and Animations -->
     <script>
       /* Mobile nav behavior:
            toggles .show to reveal/hide the menu list. */

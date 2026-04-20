@@ -3,17 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Services Page -->
     <title>Our Services | Creative Elevation</title>
+    <!-- Seperated 2 CSS Files, Main for global styles(Nav, Footer, Hero, and any global styles) While 
+     the Other CSS is for Page Specific Styles. -->
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="../css/services.css" />
+    <!-- Font Icons CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
+  <!-- Main Body -->
   <body class="fit-screen services-reference">
-    <!-- Main site navigation
-         Same structure as all other pages -->
+    <!-- Navigation Bar With 5 Links, and Clickable Logo. -->
     <header>
       <nav class="main-nav">
         <a href="../index.html" class="logo">Creative Elevation</a>
@@ -30,8 +34,7 @@
       </nav>
     </header>
     <main>
-      <!-- Services hero section
-             Sets page context before detailed sections -->
+      <!-- Hero Section that Shows what Creative Elevation has to offer -->
       <section class="services-hero-ref" aria-label="Services Hero">
         <div class="hero-content">
           <h1>Creative Studio Space</h1>
@@ -43,8 +46,7 @@
         </div>
       </section>
 
-      <!-- Main service feature cards
-             Uses image backgrounds + overlay copy -->
+      <!-- Bento Box Services Grid Design -->
       <section class="services-main-ref" id="services">
         <h2>Our Services</h2>
         <div class="services-layout-ref">
@@ -80,8 +82,7 @@
         </div>
       </section>
 
-      <!-- Reasons to choose the studio
-             Highlights value in short, scannable cards -->
+      <!-- 2x3 Grid for Why Choose Us  -->
       <section class="why-ref" aria-label="Why Choose Us">
         <h2>Why Choose Us?</h2>
         <div class="use-cases-grid-ref">
@@ -117,12 +118,12 @@
         </div>
       </section>
 
-      <!-- Client testimonials
-             Adds trust and real-world context -->
+      <!-- Client Feedback Sections 2x2 Grid(Expandable) -->
       <section class="testimonials-ref" aria-label="Testimonials">
         <h2>What Our Clients Say</h2>
         <div class="testimonials-grid-ref">
           <article class="testimonial-row-ref">
+            <!-- It Has Picture, Name, and Work and Their Feedback -->
             <img
               src="https://randomuser.me/api/portraits/men/32.jpg"
               alt="Alex R portrait"
@@ -177,8 +178,8 @@
         </div>
       </section>
     </main>
-    <!-- Shared footer links and social icons
-         Consistent exit navigation on every page -->
+
+    <!-- Footer with Important Nav Bar Links and Socials -->
     <footer>
       <div class="footer-container">
         <div class="footer-social">
@@ -206,6 +207,8 @@
         <p>&copy; 2025 Creative Elevation. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- In Built Java Script For Responsiveness and Animations -->
     <script>
       /* Mobile menu toggle:
        switches .show so nav links are visible on small screens. */

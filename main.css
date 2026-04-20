@@ -183,3 +183,20 @@ section.animate, .about-content-section.animate {
     .nav-links.show { max-height: 400px; }
     .nav-links a { width: 100%; border-radius: 0; padding: 1rem; border-bottom: 1px solid #222; }
 }
+
+
+/* =========================================
+   Custom Scrollbar
+   Styled scrollbar for better user experience
+   ========================================= */
+::-webkit-scrollbar {
+    width: 10px;
+    background: #181818;
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, #b8933b 0%, #d6ad60 100%);
+    border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #d6ad60;
+}

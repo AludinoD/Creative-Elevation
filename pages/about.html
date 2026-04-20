@@ -3,17 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- About Us Page -->
     <title>About Us | Creative Elevation</title>
+    <!-- Seperated 2 CSS Files, Main for global styles(Nav, Footer, Hero, and any global styles) While 
+     the Other CSS is for Page Specific Styles. -->
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="../css/about.css" />
+    <!-- Font Icons CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
   </head>
+
+  <!-- Main Body -->
   <body class="fit-screen about-reference">
-    <!-- Main site navigation
-         Keeps page-to-page movement identical for users -->
+    <!-- Navigation Bar With 5 Links, and Clickable Logo. -->
     <header>
       <nav class="main-nav">
         <a href="../index.html" class="logo">Creative Elevation</a>
@@ -31,8 +36,7 @@
     </header>
 
     <main>
-      <!-- About hero with background image and intro text
-             Introduces the brand mission in one focused viewport -->
+      <!-- Hero Section that explains Creative Elevation -->
       <section class="about-hero-ref" aria-label="About Hero">
         <div class="hero-content">
           <h1>About Creative Elevation</h1>
@@ -45,8 +49,7 @@
         </div>
       </section>
 
-      <!-- Story and values content
-             Explains brand purpose and decision-making principles -->
+      <!-- Our Story Section and Their Values -->
       <section class="about-story-ref" aria-label="Our Story">
         <h2>Our Story</h2>
         <p>
@@ -63,8 +66,7 @@
         </ul>
       </section>
 
-      <!-- Team member cards
-             Presents people behind the brand with role context -->
+      <!-- Our Team Section and Their Respective Card Grids -->
       <section class="team-ref" aria-label="Our Team">
         <h2>Our Team</h2>
         <div class="team-grid-ref">
@@ -95,8 +97,8 @@
         </div>
       </section>
 
-      <!-- Contact details and simple inquiry form
-             Gives users a low-friction way to reach the team -->
+      <!-- Contact Information Section -->
+      <!-- This section gives information about how to reach Creative Elevation -->
       <section class="connect-ref" aria-label="Let's Connect">
         <div class="connect-copy">
           <h2>Let's Connect</h2>
@@ -115,29 +117,63 @@
             <p>Mon-Sun: 9am - 10pm</p>
           </div>
         </div>
+
+        <!-- Contact Form that Uses Web3Forms API to send an email to the Creative ELevation team. -->
         <div class="connect-form-wrap">
-          <form class="connect-form">
+          <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            class="connect-form"
+          >
+            <!-- Web3Forms Access Key -->
+            <input
+              type="hidden"
+              name="access_key"
+              value="aec4fb9c-e091-4366-bb8d-f6b59e219f02"
+            />
+
+            <!-- Name Field -->
             <label for="about-name">Name</label>
-            <input id="about-name" type="text" placeholder="Elijah Colendres" />
+            <input
+              id="about-name"
+              name="name"
+              type="text"
+              placeholder="Elijah Colendres"
+              required
+            />
+            <!-- Email Field -->
             <label for="about-email">Email Address</label>
             <input
               id="about-email"
+              name="email"
               type="email"
               placeholder="example@gmail.com"
+              required
             />
+            <!-- Message Field -->
             <label for="about-message">Message</label>
             <textarea
               id="about-message"
+              name="message"
               placeholder="Tell us something"
+              required
             ></textarea>
-            <button class="send-btn" type="button">Send Message</button>
+            <!-- Submit Field -->
+            <input
+              type="checkbox"
+              name="botcheck"
+              class="hidden"
+              style="display: none"
+            />
+
+            <!-- Submit Button -->
+            <button class="send-btn" type="submit">Send Message</button>
           </form>
         </div>
       </section>
     </main>
 
-    <!-- Shared footer links and social icons
-         Keeps navigation and socials accessible at page end -->
+    <!-- Footer with Important Nav Bar Links and Socials -->
     <footer>
       <div class="footer-container">
         <div class="footer-social">
@@ -171,6 +207,7 @@
       <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- In Built Java Script For Responsiveness and Animations -->
     <script>
       /* Fade-in utility:
            Observer adds .animate when sections become visible to avoid
