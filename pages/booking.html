@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Booking Page -->
     <title>Book Now | Creative Elevation</title>
-    <!-- Seperated 2 CSS Files, Main for global styles(Nav, Footer, Hero, and any global styles) While 
-     the Other CSS is for Page Specific Styles. -->
+    <!-- Seperated 2 CSS Files, Main for global styles(Nav, Footer, Hero, and any global styles) While the Other CSS is for Page Specific Styles. -->
     <link rel="stylesheet" href="/main.css" />
     <link rel="stylesheet" href="../css/booking.css" />
     <!-- Font Icons CSS -->
@@ -14,6 +13,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="icon" type="image/x-icon" href="../imgs/favicon.ico" />
   </head>
   <!-- Main Body -->
   <body class="fit-screen booking-reference">
@@ -33,79 +33,28 @@
         </div>
       </nav>
     </header>
-
     <!-- Booking Hero Section -->
     <main>
       <section class="booking-hero">
         <div class="hero-content">
           <h1>Secure Your Space</h1>
-          <p>
-            Select your preferred studio or event suite and choose a time that
-            works for your vision.
-          </p>
+          <p>Select your preferred time that works for your vision.</p>
         </div>
       </section>
 
-      <!-- Booking Form Grid -->
-      <section class="booking-container" aria-label="Booking Form">
-        <div class="booking-card">
-          <form class="booking-form">
-            <div class="booking-grid">
-              <!-- Name Field -->
-              <div class="booking-field">
-                <label for="booking-name">Full Name</label>
-                <input
-                  type="text"
-                  id="booking-name"
-                  placeholder="Your Name"
-                  required
-                />
-              </div>
-              <!-- Services Selection with Options -->
-              <div class="booking-field">
-                <label for="booking-service">Services Needed</label>
-                <select id="booking-service" required>
-                  <option value="" disabled selected>Select a Space</option>
-                  <option value="studio">Studio &amp; Content Space</option>
-                  <option value="event">Event Suite</option>
-                  <option value="work">Work Suite</option>
-                </select>
-              </div>
-
-              <!-- Booking Date Field With Built In Calendar from webkit -->
-              <div class="booking-field">
-                <label for="booking-date">Booking Date</label>
-                <input type="date" id="booking-date" required />
-              </div>
-
-              <!-- Booking Duration Field with options -->
-              <div class="booking-field">
-                <label for="booking-duration">Duration</label>
-                <select id="booking-duration" required>
-                  <option value="" disabled selected>Select Duration</option>
-                  <option value="hourly">Hourly</option>
-                  <option value="half-day">Half Day</option>
-                  <option value="full-day">Full Day</option>
-                  <option value="weekly">Weekly</option>
-                </select>
-              </div>
-            </div>
-
-            <!-- Optional Message Field -->
-            <div class="booking-field booking-message">
-              <label for="booking-message">Message</label>
-              <textarea
-                id="booking-message"
-                rows="5"
-                placeholder="Optional Message"
-              ></textarea>
-            </div>
-            <!-- Submit Button -->
-            <button type="submit" class="booking-submit">
-              Submit Booking Request
-            </button>
-          </form>
-        </div>
+      <!-- Booking Container for the Calendly Widget API -->
+      <!-- This is an automated API that allows user to book the venue and Informs the Host -->
+      <section class="booking-container" aria-label="Booking Calendar">
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/blankframedigital/booking-calendar-creative-elevation?hide_event_type_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=f5f5f5&primary_color=d6ad60"
+          style="min-width: 320px; height: 700px"
+        ></div>
+        <script
+          type="text/javascript"
+          src="https://assets.calendly.com/assets/external/widget.js"
+          async
+        ></script>
       </section>
     </main>
 
@@ -153,7 +102,9 @@
         navLinks.classList.toggle("show");
         navToggle.classList.toggle("active");
       });
-
+      /* Fade-in controller:
+       applies .animate only when sections enter viewport. */
+      // Adds fade-in class when sections enter view
       document.addEventListener("DOMContentLoaded", function () {
         const observer = new IntersectionObserver(
           (entries) => {

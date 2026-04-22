@@ -1,6 +1,4 @@
-/* =========================================
-   Hero Section
-   ========================================= */
+/* Index(Home) Specific Stylesheet */
 .hero {
     min-height: calc(100vh - 58px);
     display: flex;
@@ -12,13 +10,17 @@
     text-align: left;
 }
 
+/* Hero Content h1 */
 .hero-content h1 {
     font-size: clamp(2.35rem, 4.1vw, 4rem);
     margin-bottom: 1rem;
+    max-width: 50rem;
 }
 
+/* Hero Content Text */
 .hero-content p { font-size: 1.12rem; margin-bottom: 1.5rem; max-width: 560px; }
 
+/* Call TO Action Button Going to Booking Page */
 .cta-button {
     display: inline-block;
     background: transparent;
@@ -32,11 +34,10 @@
     transition: 0.3s;
 }
 
+/* Hover Effect */
 .cta-button:hover { background: rgba(214, 173, 96, 0.15); }
 
-/* =========================================
-   What We Do (Concept Section)
-   ========================================= */
+/* What We Do Section Area */
 #concept {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -46,6 +47,7 @@
     align-items: stretch;
 }
 
+/* About Text Container with the Header and the Paragraph Content */
 .about-text-container {
     background: rgba(24, 24, 24, 0.98);
     padding: 3rem;
@@ -57,6 +59,7 @@
 .about-text-container h2 { text-align: left; margin-bottom: 1.5rem; }
 .about-text-container h2::after { margin-left: 0; }
 
+/* About Image Container (Right Picture) */
 .about-image-container img {
     width: 100%;
     height: 100%;
@@ -64,9 +67,7 @@
     min-height: 400px;
 }
 
-/* =========================================
-   Services Grid
-   ========================================= */
+/* Core Offering Section Grid 3x1 */
 .services-section {
     padding: 4rem 1rem;
     max-width: 1100px;
@@ -80,6 +81,7 @@
     margin-top: 2rem;
 }
 
+/* Service Card Design */
 .service-card {
     background: var(--card-bg);
     padding: 2.5rem 1.5rem;
@@ -88,21 +90,22 @@
     transition: 0.3s;
 }
 
+/* Hover Effect(Goes Up and Change Color) */
 .service-card:hover {
     border-color: var(--secondary);
     transform: translateY(-5px);
 }
 
+/* Icon,Header, and Text format */
 .service-icon { font-size: 2rem; color: var(--secondary); margin-bottom: 1rem; display: block; }
 .service-card h3 { margin-bottom: 0.8rem; font-size: 1.2rem; }
 .service-card p { font-size: 0.95rem; line-height: 1.5; color: var(--muted); }
 
-/* =========================================
-   Mobile Adjustments
-   ========================================= */
+
+/* Mobile Responsiveness */
 @media (max-width: 900px) {
     #concept { grid-template-columns: 1fr; }
     .services-grid { grid-template-columns: 1fr; }
     .hero { padding-left: 1rem; text-align: center; justify-content: center; }
     .about-image-container img { min-height: 250px; }
-}
+}   

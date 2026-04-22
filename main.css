@@ -1,9 +1,9 @@
 /* Import Google Fonts */
+/* Playfair Display & Nunito Sans as Our Main Font */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Nunito+Sans:wght@400;600;700&display=swap');
 
-/* =========================================
-   CSS Custom Properties (Variables)
-   ========================================= */
+/* This is the Main CSS stylesheet that is present in all HTML as this is the foundation of the website. */
+/* Set Variable Colors for the website so it remains consistent. */
 :root {
     --primary: #0E0E0E;
     --secondary: #D6AD60;
@@ -14,9 +14,7 @@
     --z-nav: 1000;
 }
 
-/* =========================================
-   Base Styles
-   ========================================= */
+/* Base CSS Style */
 * {
     margin: 0;
     padding: 0;
@@ -25,6 +23,7 @@
 
 html { scroll-behavior: smooth; }
 
+/* Body */
 body {
     font-family: 'Nunito Sans', Arial, Helvetica, sans-serif;
     color: var(--accent);
@@ -35,21 +34,21 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Typography - Updated to Playfair Display */
+/* Header Typography */
 h1, h2, h3, h4, .logo {
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 400;
     color: var(--secondary);
     line-height: 1.15;
 }
-
+/* Header 2 Style */
 h2 {
     font-size: 2rem;
     position: relative;
     padding-bottom: 0.5rem;
     text-align: center;
 }
-
+/* Header 2 Style Line */
 h2::after {
     content: '';
     display: block;
@@ -58,12 +57,10 @@ h2::after {
     background: linear-gradient(90deg, var(--secondary) 60%, var(--accent) 100%);
     margin: 0.5rem auto 0 auto;
 }
-
+/* Image Displays for consistency */
 img { display: block; max-width: 100%; }
 
-/* =========================================
-   Navigation
-   ========================================= */
+/* Navigation Bar */
 nav.main-nav {
     position: sticky;
     top: 0;
@@ -78,10 +75,13 @@ nav.main-nav {
     border-bottom: 1px solid rgba(214, 173, 96, 0.18);
 }
 
+/* Logo Left Side Style */
 .logo { text-decoration: none; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1.5px; }
 
+/* Logo Clickable Links */
 .nav-links { display: flex; gap: 1rem; }
 
+/* Navigation Link Styles */
 .nav-links a {
     color: var(--accent);
     text-decoration: none;
@@ -94,11 +94,13 @@ nav.main-nav {
     transition: 0.3s;
 }
 
+/* Navigation Link Hover & Which Page its on */
 .nav-links a:hover, .nav-links a[aria-current="page"] {
     background: rgba(214, 173, 96, 0.2);
     color: var(--secondary);
 }
 
+/* Toggle Nav Bar for Mobile Phones */
 .nav-toggle {
     display: none;
     background: none;
@@ -108,15 +110,15 @@ nav.main-nav {
     cursor: pointer;
 }
 
-/* =========================================
-   Footer
-   ========================================= */
+
+/* Footer Section */
 footer {
     background: var(--background);
     padding: 1.6rem 0 1.2rem 0;
     text-align: center;
 }
 
+/* Footer Container that holds important informations */
 .footer-container {
     display: flex;
     flex-direction: column;
@@ -125,20 +127,22 @@ footer {
     margin: 0 auto;
 }
 
-.footer-logo { display: none; } /* Matching your previous layout logic */
+/* Footer Logo */
+.footer-logo { display: none; } 
 
+/* Footer Social Links */
 .footer-social { display: flex; justify-content: center; gap: 1.5rem; }
 .footer-social a { color: #fff; font-size: 1.1rem; transition: 0.3s; }
 .footer-social a:hover { color: var(--secondary); transform: translateY(-3px); }
 
+/* Footer Links Format */
 .footer-links { display: flex; justify-content: center; gap: 1.6rem; flex-wrap: wrap; }
 .footer-links a { color: var(--accent); text-decoration: none; font-size: 0.95rem; }
 
+/* CopyRight Section in the footer */
 .footer-copyright { margin-top: 1rem; font-size: 0.85rem; opacity: 0.7; }
 
-/* =========================================
-   Scroll To Top & Animations
-   ========================================= */
+/* Scroll To Top Button on the Right Size */
 #scrollTopBtn {
     display: none;
     position: fixed;
@@ -154,6 +158,7 @@ footer {
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
+/*Animations For each section  */
 section, .about-content-section {
     opacity: 0;
     transform: translateY(20px);
@@ -165,9 +170,9 @@ section.animate, .about-content-section.animate {
     transform: translateY(0);
 }
 
-/* =========================================
-   Responsive Nav
-   ========================================= */
+/* Mobile Responsiveness for Smaller Screens */
+/* Other Elements are auto responsive and changes size depending on the screen size. */
+/* The Only Problem is the Nav bar, in mobile Phones in turns into a Hamburger Icon So It has more space.*/
 @media (max-width: 900px) {
     .nav-toggle { display: block; }
     .nav-links {
@@ -185,10 +190,7 @@ section.animate, .about-content-section.animate {
 }
 
 
-/* =========================================
-   Custom Scrollbar
-   Styled scrollbar for better user experience
-   ========================================= */
+/* CUstom Scrollbar to match the websites aesthetic using webkit. */
 ::-webkit-scrollbar {
     width: 10px;
     background: #181818;
