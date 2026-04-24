@@ -47,7 +47,7 @@
             creativity, and meaningful connections. Our mission is to elevate
             your creative experience through thoughtfully curated spaces.
           </p>
-          <a href="contact.html" class="hero-cta">Get in Touch</a>
+          <a href="#contact" class="hero-cta">Get in Touch</a>
         </div>
       </section>
 
@@ -101,7 +101,7 @@
 
       <!-- Contact Information Section -->
       <!-- This section gives information about how to reach Creative Elevation -->
-      <section class="connect-ref" aria-label="Let's Connect">
+      <section class="connect-ref" aria-label="Let's Connect" id="contact">
         <div class="connect-copy">
           <h2>Let's Connect</h2>
           <p>
@@ -141,7 +141,7 @@
               id="about-name"
               name="name"
               type="text"
-              placeholder="Elijah Colendres"
+              placeholder="John Doe"
               required
             />
             <!-- Email Field -->
@@ -250,6 +250,30 @@
         navLinks.classList.toggle("show");
         navToggle.classList.toggle("active");
       });
+
+      /* Back to Top Button Logic  */
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      // 1. Monitor scroll position to show/hide the button
+      window.onscroll = function () {
+        // Show button after scrolling down 300px
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          scrollTopBtn.style.display = "block";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      };
+
+      // Add click event to scroll back to the top
+      scrollTopBtn.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
     </script>
   </body>
 </html>

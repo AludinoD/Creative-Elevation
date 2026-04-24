@@ -1,8 +1,4 @@
-
-/* =========================================
-   About Hero Section
-   Full-width hero with left-aligned typography
-   ========================================= */
+/* About Hero Section */
 .about-reference .about-hero-ref {
 min-height: calc(100vh - 72px);
 display: flex;
@@ -18,6 +14,7 @@ background: linear-gradient(110deg, rgba(0, 0, 0, 0.82) 34%, rgba(0, 0, 0, 0.46)
 max-width: 660px;
 }
 
+/* Header Style */
 .about-reference .about-hero-ref h1 {
 color: var(--secondary);
 font-size: clamp(2.8rem, 5.2vw, 4.5rem);
@@ -25,6 +22,7 @@ line-height: 0.98;
 margin-bottom: 1rem;
 }
 
+/* Paragraph Style */
 .about-reference .about-hero-ref p {
 color: #f2f2f2;
 font-size: 1rem;
@@ -33,6 +31,7 @@ margin-bottom: 1.1rem;
 max-width: 430px;
 }
 
+/* Call TO Action Button */
 .about-reference .hero-cta {
 display: inline-block;
 background: rgba(0, 0, 0, 0.35);
@@ -40,24 +39,25 @@ color: var(--secondary);
 border: 1px solid var(--secondary);
 text-decoration: none;
 font-size: 0.95rem;
-padding: 0.65rem 1.25rem;
+padding: 0.8rem 2.6rem;
+text-transform: uppercase;
 transition: 0.3s;
 }
 
+/* Button Hover */
 .about-reference .hero-cta:hover {
 background: rgba(214, 173, 96, 0.18);
 }
 
-/* =========================================
-   Story & Values Section
-   Long-form copy with vertical accent styling
-   ========================================= */
+/* Story & Values Section */
+
 .about-reference .about-story-ref {
 max-width: 980px !important;
 margin: 0 auto 1.2rem auto !important;
 padding: 2.7rem 3rem !important;
 }
 
+/* Paragraph Style */
 .about-reference .about-story-ref p {
 max-width: 70ch;
 font-size: 1.13rem;
@@ -65,6 +65,7 @@ color: #f0f0f0;
 margin-bottom: 1.4rem;
 }
 
+/* Values List Style Format */
 .about-reference .values-list {
 list-style: none;
 border-left: 2px solid rgba(214, 173, 96, 0.55);
@@ -72,22 +73,21 @@ padding-left: 1rem;
 margin-top: 1rem;
 }
 
+/* List Items */
 .about-reference .values-list li {
 color: #f1f1f1;
 font-size: 1.03rem;
 margin-bottom: 0.5rem;
 }
 
-/* =========================================
-   Team Section
-   Grid layout for professional portraits
-   ========================================= */
+/* Team Section */
 .about-reference .team-ref {
 max-width: 980px !important;
 margin: 0 auto 1rem auto !important;
 text-align: center;
 }
 
+/* Team Grid 3 Pictures */
 .about-reference .team-grid-ref {
 display: grid;
 grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -95,12 +95,14 @@ gap: 1.5rem;
 margin-top: 2rem;
 }
 
+/* Team Card Design */
 .about-reference .team-card-ref {
 border: 1px solid rgba(214, 173, 96, 0.5);
 background: rgba(16, 16, 16, 0.96);
 padding: 0.8rem;
 }
 
+/* Team Card Image Format */
 .about-reference .team-card-ref img {
 width: 100%;
 height: 250px;
@@ -109,10 +111,7 @@ border-radius: 2px;
 margin-bottom: 0.7rem;
 }
 
-/* =========================================
-   Connect Section (Contact Grid)
-   Two-column layout: Info vs. Form
-   ========================================= */
+/* Connect Section Side By Side */
 .about-reference .connect-ref {
 background: rgba(24, 24, 24, 0.98);
 max-width: 980px !important;
@@ -123,11 +122,13 @@ grid-template-columns: 1fr 1.15fr;
 gap: 2rem;
 }
 
+/* Heading Format */
 .about-reference .connect-meta h3 {
+font-family: 'Nunito Sans', Georgia, serif !important;
 font-size: 1rem;
 margin: 1.2rem 0 0.2rem 0;
 }
-
+/* Connect Form Style */
 .about-reference .connect-form-wrap {
 border: 1px solid rgba(214, 173, 96, 0.52);
 background: rgba(12, 12, 12, 0.96);
@@ -139,6 +140,7 @@ display: grid;
 gap: 0.8rem;
 }
 
+/* Form & Input Styles */
 .about-reference .connect-form input,
 .about-reference .connect-form textarea {
 width: 100%;
@@ -149,6 +151,7 @@ padding: 0.7rem;
 font-family: inherit;
 }
 
+/* Send Button Style */
 .about-reference .send-btn {
 background: transparent;
 color: var(--secondary);
@@ -156,16 +159,17 @@ border: 1px solid var(--secondary);
 padding: 0.6rem;
 cursor: pointer;
 text-transform: uppercase;
+font-family: 'Nunito Sans', Georgia, serif !important;
 transition: 0.3s;
 }
 
+/* Send Button Hover  */
 .about-reference .send-btn:hover {
 background: rgba(214, 173, 96, 0.1);
 }
 
-/* =========================================
-   Mobile Responsiveness
-   ========================================= */
+
+/* Mobile Responsiveness */
 @media (max-width: 900px) {
 .about-reference .team-grid-ref,
 .about-reference .connect-ref {

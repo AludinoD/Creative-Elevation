@@ -91,6 +91,11 @@
       </div>
     </footer>
 
+    <!-- Back-to-top button -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- In Built Java Script For Responsiveness and Animations -->
     <script>
       /* Mobile menu toggle:
@@ -120,6 +125,30 @@
           observer.observe(section);
         });
       });
+
+      /* Back to Top Button Logic  */
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      // 1. Monitor scroll position to show/hide the button
+      window.onscroll = function () {
+        // Show button after scrolling down 300px
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          scrollTopBtn.style.display = "block";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      };
+
+      // Add click event to scroll back to the top
+      scrollTopBtn.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
     </script>
   </body>
 </html>

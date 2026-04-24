@@ -1,6 +1,4 @@
-/* =========================================
-   Services Hero Section
-   ========================================= */
+/* Services Hero Section */
 .services-reference .services-hero-ref {
     min-height: calc(100vh - 58px) !important;
     width: 100%;
@@ -13,11 +11,13 @@
                 url('/imgs/img\ \(4\).jpg') center/cover no-repeat !important;
 }
 
+/* Services Hero Format */
 .services-reference .hero-content {
     margin: 0;
     max-width: 520px;
 }
 
+/* Services Header Format */
 .services-reference .hero-content h1 {
     color: var(--secondary);
     font-size: clamp(2.25rem, 4.4vw, 3.9rem);
@@ -26,6 +26,7 @@
     font-family: 'Playfair Display', Georgia, serif;
 }
 
+/* Paragraph Format */
 .services-reference .hero-content p {
     color: #f2f2f2;
     font-size: 0.95rem;
@@ -33,28 +34,27 @@
     margin-bottom: 1.15rem;
     max-width: 500px;
 }
-
+/* Call To Action Button */
 .services-reference .cta-button {
     background: rgba(0, 0, 0, 0.35) !important;
     color: var(--secondary);
     border: 1px solid var(--secondary) !important;
     border-radius: 0;
     font-size: 0.95rem;
-    padding: 0.65rem 1.2rem;
-    text-transform: none;
+    padding: 0.8rem 1.6rem;
+    text-transform: uppercase;
     text-decoration: none;
     display: inline-block;
 }
 
-/* =========================================
-   Main Services Layout (Bento Grid)
-   ========================================= */
+/* Services Main Layout (Bento Grid) */
 .services-reference .services-main-ref {
     max-width: 980px !important;
     margin: 0 auto 1rem auto !important;
     padding: 1.5rem 1rem 1rem 1rem !important;
 }
 
+/* Grid layout */
 .services-reference .services-layout-ref {
     display: grid;
     grid-template-columns: 1.55fr 1fr;
@@ -62,6 +62,7 @@
     align-items: stretch;
 }
 
+/* Card Design */
 .services-reference .service-card-ref {
     border: 1px solid rgba(214, 173, 96, 0.52);
     background: rgba(15, 15, 15, 0.97);
@@ -73,6 +74,7 @@
     align-items: flex-end;
 }
 
+/* Card Background Image*/
 .services-reference .service-card-ref::before {
     content: "";
     position: absolute;
@@ -83,6 +85,7 @@
     background-repeat: no-repeat;
 }
 
+/* Card Overlay */
 .services-reference .service-card-ref::after {
     content: "";
     position: absolute;
@@ -90,43 +93,48 @@
     background: linear-gradient(to top, rgba(0, 0, 0, 0.88) 22%, rgba(0, 0, 0, 0.3) 70%);
 }
 
+/* Card Content */
 .services-reference .service-copy {
     position: relative;
     z-index: 1;
     width: 100%;
 }
 
+/* Right Column Grid */
 .services-reference .services-right-ref {
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 0.85rem;
 }
 
+/* Image Backgrounds */
 .services-reference .services-layout-ref > .service-card-ref { --card-bg-img: url('/imgs/img\ \(4\).jpg'); }
 .services-reference .services-right-ref > .service-card-ref:first-child { --card-bg-img: url('/imgs/img\ \(5\).jpg'); }
 .services-reference .services-right-ref > .service-card-ref:last-child { --card-bg-img: url('/imgs/img\ \(2\).jpg'); }
 
-/* =========================================
-   Why Choose Us Section
-   ========================================= */
+
+/* Why Choose US Section */
 .services-reference .why-ref {
     max-width: 980px !important;
     margin: 0 auto 1rem auto !important;
     padding: 0.9rem 1rem !important;
 }
 
+/* 2x3 Grid */
 .services-reference .use-cases-grid-ref {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
 }
 
+/* Card Design */
 .services-reference .use-case-card-ref {
     border: 1px solid rgba(214, 173, 96, 0.5);
     background: rgba(15, 15, 15, 0.97);
     padding: 0.6rem;
 }
 
+/* Card Header */
 .services-reference .use-case-card-ref h3 {
     color: var(--secondary);
     font-size: 0.95rem;
@@ -134,27 +142,29 @@
     font-family: 'Playfair Display', serif;
 }
 
+/* Card Description */
 .services-reference .use-case-card-ref p {
     color: #efefef;
     font-size: 0.95rem;
     line-height: 1.35;
 }
 
-/* =========================================
-   Testimonials Section
-   ========================================= */
+
+/* What Our CLients Say Section */
 .services-reference .testimonials-ref {
     max-width: 980px !important;
     margin: 0 auto 0.7rem auto !important;
     padding: 0.9rem 1rem !important;
 }
 
+/* Grid 2x2 */
 .services-reference .testimonials-grid-ref {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.65rem;
 }
 
+/* Row Items */
 .services-reference .testimonial-row-ref {
     border: 1px solid rgba(214, 173, 96, 0.5);
     background: rgba(15, 15, 15, 0.97);
@@ -164,6 +174,7 @@
     gap: 0.45rem;
 }
 
+/* Image Style */
 .services-reference .testimonial-row-ref img {
     width: 34px;
     height: 34px;
@@ -171,6 +182,7 @@
     object-fit: cover;
 }
 
+/* Header 4 Style */
 .services-reference .testimonial-row-ref h4 {
     font-size: 0.9rem;
     color: var(--secondary);
@@ -178,15 +190,14 @@
     font-family: 'Playfair Display', serif;
 }
 
+/* Paragraph Style */
 .services-reference .testimonial-row-ref p {
     font-size: 0.9rem;
     color: #efefef;
     line-height: 1.3;
 }
 
-/* =========================================
-   Responsive Logic
-   ========================================= */
+/* Mobile Responsiveness 1 column for everything */
 @media (max-width: 900px) {
     .services-reference .services-layout-ref,
     .services-reference .services-right-ref,

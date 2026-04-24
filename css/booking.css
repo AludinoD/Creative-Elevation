@@ -11,6 +11,7 @@
     width: 100%;
 }
 
+/* Booking Hero heading */
 .booking-hero h1 {
     color: var(--secondary) !important;
     font-family: 'Playfair Display', Georgia, serif !important;
@@ -19,6 +20,7 @@
     margin-bottom: 15px;
 }
 
+/* Hero Paragraph */
 .booking-hero p {
     color: var(--accent);
     font-family: 'Nunito Sans', sans-serif;

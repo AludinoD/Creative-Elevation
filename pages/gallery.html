@@ -45,7 +45,9 @@
             Explore our versatile creative space through our curated collection
             of photos showcasing different setups and possibilities.
           </p>
-          <a href="contact.html" class="cta-button">Reserve Your Suite</a>
+          <a href="../pages/booking.html" class="cta-button"
+            >Reserve Your Space</a
+          >
         </div>
       </section>
 
@@ -61,7 +63,7 @@
             <img src="/imgs/img (5).jpg" alt="Seating and stage setup" />
           </figure>
           <figure class="photo-card tall">
-            <img src="/imgs/img (7).jpg" alt="\Creative elevation wall" />
+            <img src="/imgs/img (7).jpg" alt="Creative elevation wall" />
           </figure>
           <figure class="photo-card medium">
             <img src="/imgs/img (6).jpg" alt="Studio room wide shot" />
@@ -81,6 +83,11 @@
         </div>
       </section>
     </main>
+
+    <!-- Gallery Open Box Overlay -->
+    <div id="lightbox-overlay">
+      <img src="" alt="Large View" />
+    </div>
 
     <!-- Footer with Important Nav Bar Links and Socials -->
     <footer>
@@ -115,6 +122,11 @@
       </div>
     </footer>
 
+    <!-- Back-to-top button -->
+    <button id="scrollTopBtn" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </button>
+
     <!-- In Built Java Script For Responsiveness and Animations -->
     <script>
       /* Mobile nav behavior:
@@ -144,6 +156,56 @@
         document.querySelectorAll("section").forEach((section) => {
           observer.observe(section);
         });
+      });
+
+      /* Back to Top Button Logic  */
+      const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+      //  Monitor scroll position to show/hide the button
+      window.onscroll = function () {
+        // Show button after scrolling down 300px
+        if (
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
+        ) {
+          scrollTopBtn.style.display = "block";
+        } else {
+          scrollTopBtn.style.display = "none";
+        }
+      };
+
+      // Add click event to scroll back to the top
+      scrollTopBtn.onclick = function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      };
+
+      // Gallery Open Overlay Logic
+      const lightbox = document.getElementById("lightbox-overlay");
+      const lightboxImg = lightbox.querySelector("img");
+      const photoCards = document.querySelectorAll(".photo-card img");
+
+      photoCards.forEach((img) => {
+        img.addEventListener("click", () => {
+          //  Open the lightbox
+          lightbox.style.display = "flex";
+          // Set the src to the clicked image's src
+          lightboxImg.src = img.src;
+          // Trigger a small delay for the scale animation
+          setTimeout(() => {
+            lightbox.classList.add("active");
+          }, 10);
+        });
+      });
+
+      // Close lightbox when clicking anywhere on the overlay
+      lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+        setTimeout(() => {
+          lightbox.style.display = "none";
+        }, 300);
       });
     </script>
   </body>
