@@ -1,7 +1,7 @@
 /* Booking Hero Section */
 .booking-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), 
-                url('../imgs/img (6).jpg') center/cover no-repeat;
+                url('../imgs/newImgs/booking1.jpg') center/cover no-repeat;
     height: 60vh;
     display: flex;
     align-items: center;

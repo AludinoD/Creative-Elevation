@@ -8,7 +8,7 @@
     text-align: left !important;
     padding: 2.6rem 8vw;
     background: linear-gradient(112deg, rgba(0, 0, 0, 0.88) 36%, rgba(0, 0, 0, 0.54) 100%), 
-                url('/imgs/img\ \(4\).jpg') center/cover no-repeat !important;
+                url('/imgs/newImgs/services1.jpg') center/cover no-repeat !important;
 }
 
 /* Services Hero Format */
@@ -108,10 +108,73 @@
 }
 
 /* Image Backgrounds */
-.services-reference .services-layout-ref > .service-card-ref { --card-bg-img: url('/imgs/img\ \(4\).jpg'); }
-.services-reference .services-right-ref > .service-card-ref:first-child { --card-bg-img: url('/imgs/img\ \(5\).jpg'); }
-.services-reference .services-right-ref > .service-card-ref:last-child { --card-bg-img: url('/imgs/img\ \(2\).jpg'); }
+.services-reference .services-layout-ref > .service-card-ref { --card-bg-img: url('/imgs/newImgs/servicesb1.jpg'); }
+.services-reference .services-right-ref > .service-card-ref:first-child { --card-bg-img: url('/imgs/newImgs/servicesb2.jpg'); }
+.services-reference .services-right-ref > .service-card-ref:last-child { --card-bg-img: url('/imgs/newImgs/servicesb3.jpg'); }
 
+
+
+/* Bento Box Hover */
+.service-card-ref {
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.3s ease;
+}
+
+/* Lift up Animation on the Bento Box on hover */
+.service-card-ref:hover {
+    transform: translateY(-8px);
+    border-color: var(--secondary);
+    z-index: 5;
+}
+
+/* Lift up effect for Use Case cards and Testimonials */
+.use-case-card-ref, 
+.testimonial-row-ref {
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for the Cards */
+.use-case-card-ref:hover, 
+.testimonial-row-ref:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* LightBox overlay when opening the image*/
+#lightbox-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(14, 14, 14, 0.95);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#lightbox-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+#lightbox-overlay img {
+    max-width: 90%;
+    max-height: 85%;
+    border: 1px solid var(--secondary);
+    transform: scale(0.8);
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+#lightbox-overlay.active img {
+    transform: scale(1);
+}
 
 /* Why Choose US Section */
 .services-reference .why-ref {
