@@ -143,8 +143,9 @@ footer {
 .footer-copyright { margin-top: 1rem; font-size: 0.85rem; opacity: 0.7; }
 
 /* Scroll To Top Button on the Right Size */
+/* --- Back-to-Top Button with Animation --- */
 #scrollTopBtn {
-    display: none;
+    display: none; /* Controlled by JS */
     position: fixed;
     bottom: 30px;
     right: 30px;
@@ -155,7 +156,37 @@ footer {
     border-radius: 50%;
     border: none;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: var(--z-nav);
+    
+    /* Smooth Hover Transition */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Animation for appearance */
+    animation: bounceIn 0.5s ease;
+}
+
+/* Hover Animation: Lift up and glow */
+#scrollTopBtn:hover {
+    background: #ddb263;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(214, 173, 96, 0.4);
+}
+
+/* Entrance Keyframes */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3) translateY(20px);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
 }
 
 /*Animations For each section  */

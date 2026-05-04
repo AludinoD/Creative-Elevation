@@ -132,23 +132,27 @@
         });
       });
 
-      /* Back to Top Button Logic  */
+      /* --- Animated Back to Top Logic --- */
       const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-      // 1. Monitor scroll position to show/hide the button
       window.onscroll = function () {
-        // Show button after scrolling down 300px
         if (
           document.body.scrollTop > 300 ||
           document.documentElement.scrollTop > 300
         ) {
-          scrollTopBtn.style.display = "block";
+          // If button is currently hidden, show it with animation
+          if (
+            scrollTopBtn.style.display === "none" ||
+            scrollTopBtn.style.display === ""
+          ) {
+            scrollTopBtn.style.display = "block";
+          }
         } else {
           scrollTopBtn.style.display = "none";
         }
       };
 
-      // Add click event to scroll back to the top
+      // Smooth scroll to top
       scrollTopBtn.onclick = function () {
         window.scrollTo({
           top: 0,

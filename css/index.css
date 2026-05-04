@@ -6,7 +6,7 @@
     justify-content: flex-start;
     padding-left: 8vw;
     background: linear-gradient(120deg, rgba(0,0,0,0.85) 60%, rgba(0,0,0,0.45) 100%), 
-                url('/imgs/img\ \(3\).jpg') center/cover no-repeat;
+                url('../imgs/oldImgs/img\ \(3\).jpg') center/cover no-repeat;
     text-align: left;
 }
 

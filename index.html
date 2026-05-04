@@ -166,19 +166,32 @@
       /* Progressive helper button:
            appears after enough scroll depth to improve long-page UX */
       // Shows the back-to-top button on scroll
+      /* --- Animated Back to Top Logic --- */
       const scrollTopBtn = document.getElementById("scrollTopBtn");
+
       window.onscroll = function () {
         if (
-          document.body.scrollTop > 200 ||
-          document.documentElement.scrollTop > 200
+          document.body.scrollTop > 300 ||
+          document.documentElement.scrollTop > 300
         ) {
-          scrollTopBtn.style.display = "block";
+          // If button is currently hidden, show it with animation
+          if (
+            scrollTopBtn.style.display === "none" ||
+            scrollTopBtn.style.display === ""
+          ) {
+            scrollTopBtn.style.display = "block";
+          }
         } else {
           scrollTopBtn.style.display = "none";
         }
       };
+
+      // Smooth scroll to top
       scrollTopBtn.onclick = function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       };
 
       /* IntersectionObserver:

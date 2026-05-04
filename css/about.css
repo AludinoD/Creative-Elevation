@@ -7,7 +7,7 @@ justify-content: flex-start;
 text-align: left;
 padding: 0 8vw;
 background: linear-gradient(110deg, rgba(0, 0, 0, 0.82) 34%, rgba(0, 0, 0, 0.46) 100%), 
-                url('/imgs/img\ \(6\).jpg') center/cover no-repeat;
+                url('../imgs/oldImgs/img\ \(6\).jpg') center/cover no-repeat;
 }
 
 .about-reference .about-hero-ref .hero-content {

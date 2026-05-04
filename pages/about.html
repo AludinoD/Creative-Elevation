@@ -74,7 +74,7 @@
         <div class="team-grid-ref">
           <article class="team-card-ref">
             <img
-              src="CE - Images/img (1).jpg"
+              src="/imgs/portraits/Elijah Colendres.jpg"
               alt="Elijah Colendres portrait"
             />
             <h3>Elijah Colendres</h3>
@@ -82,7 +82,7 @@
           </article>
           <article class="team-card-ref">
             <img
-              src="CE - Images/img (1).jpg"
+              src="../imgs/portraits/Celerino Colendres.jpg"
               alt="Celerino Colendres portrait"
             />
             <h3>Celerino Colendres</h3>
@@ -90,7 +90,7 @@
           </article>
           <article class="team-card-ref">
             <img
-              src="CE - Images/img (1).jpg"
+              src="../imgs/portraits/Fedelyn Colendres.jpg"
               alt="Fedelyn Colendres portrait"
             />
             <h3>Fedelyn Colendres</h3>
@@ -254,22 +254,27 @@
       });
 
       /* Back to Top Button Logic  */
+      /* --- Animated Back to Top Logic --- */
       const scrollTopBtn = document.getElementById("scrollTopBtn");
 
-      // 1. Monitor scroll position to show/hide the button
       window.onscroll = function () {
-        // Show button after scrolling down 300px
         if (
           document.body.scrollTop > 300 ||
           document.documentElement.scrollTop > 300
         ) {
-          scrollTopBtn.style.display = "block";
+          // If button is currently hidden, show it with animation
+          if (
+            scrollTopBtn.style.display === "none" ||
+            scrollTopBtn.style.display === ""
+          ) {
+            scrollTopBtn.style.display = "block";
+          }
         } else {
           scrollTopBtn.style.display = "none";
         }
       };
 
-      // Add click event to scroll back to the top
+      // Smooth scroll to top
       scrollTopBtn.onclick = function () {
         window.scrollTo({
           top: 0,
