@@ -137,7 +137,8 @@ footer {
 
 /* Footer Links Format */
 .footer-links { display: flex; justify-content: center; gap: 1.6rem; flex-wrap: wrap; }
-.footer-links a { color: var(--accent); text-decoration: none; font-size: 0.95rem; }
+.footer-links a { color: var(--accent); text-decoration: none; font-size: 0.95rem; display: inline-block; transition: transform 0.3s ease, color 0.3s ease}
+.footer-links a:hover { color: var(--secondary); transform: translateY(-3px); }
 
 /* CopyRight Section in the footer */
 .footer-copyright { margin-top: 1rem; font-size: 0.85rem; opacity: 0.7; }
